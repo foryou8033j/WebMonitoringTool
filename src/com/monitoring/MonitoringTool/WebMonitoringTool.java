@@ -3,7 +3,10 @@ package com.monitoring.MonitoringTool;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
+import com.monitoring.SiteData;
 import com.monitoring.WebFrame;
+import com.monitoring.Settings.LoadData;
+import com.monitoring.Settings.Settings;
 
 public class WebMonitoringTool {
 
@@ -13,12 +16,12 @@ public class WebMonitoringTool {
 		try
 		{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-			
-			SwingUtilities.invokeLater(new WebFrame());
 		}catch (Exception e)
 		{
 			System.exit(0);
 		}
+		
+		SwingUtilities.invokeLater(new WebFrame());
 		
 
     }
